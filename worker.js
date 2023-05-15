@@ -1,5 +1,6 @@
-onerror = function(err) {
-  postMessage(err.message);
+onerror = function(e) {
+  e.preventDefault();
+  postMessage(e.message);
 }
 
 onmessage = async function(e) {
